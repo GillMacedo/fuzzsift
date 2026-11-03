@@ -1,0 +1,5 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/ok
+--- PASS: FuzzQ (0.00s)
+    --- PASS: FuzzQ/ok (0.00s)
+PASS

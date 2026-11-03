@@ -1,0 +1,31 @@
+--- FAIL: FuzzParse (0.00s)
+    --- FAIL: FuzzParse/3d1b4a3dd3ef0276 (0.00s)
+        size_test.go:27: Parse(Format(100000000)) = 99614720, <nil>
+    --- FAIL: FuzzParse/56a4d1e974615dc0 (0.00s)
+        size_test.go:27: Parse(Format(1100)) = 1024, <nil>
+    --- FAIL: FuzzParse/7269cbe9808cecce (0.00s)
+panic: runtime error: index out of range [-1] [recovered, repanicked]
+
+goroutine 17 [running]:
+testing.tRunner.func1.2({0x3d3838, 0x874e5fa0120})
+	/usr/local/go/src/testing/testing.go:2125 +0x1a0
+testing.tRunner.func1()
+	/usr/local/go/src/testing/testing.go:2128 +0x2c8
+panic({0x3d3838?, 0x874e5fa0120?})
+	/usr/local/go/src/runtime/panic.go:859 +0x120
+example.com/config/size.Parse({0x874e5f96277?, 0x874e608d3e0?})
+	/workspace/repo/examples/config/size/size.go:24 +0x3bc
+example.com/config/size.FuzzParse.func1(0x874e60c38c8, {0x874e5f96277?, 0x0?})
+	/workspace/repo/examples/config/size/size_test.go:21 +0x30
+reflect.Value.call({0x3a0ca0?, 0x3e2800?, 0x13?}, {0x1e037b, 0x4}, {0x874e608d710, 0x2, 0x2?})
+	/usr/local/go/src/reflect/value.go:586 +0xa88
+reflect.Value.Call({0x3a0ca0?, 0x3e2800?, 0x1126f0?}, {0x874e608d710?, 0x3df040?, 0x3ce710?})
+	/usr/local/go/src/reflect/value.go:369 +0x94
+testing.(*F).Fuzz.func1.1(0x874e60c38c8?)
+	/usr/local/go/src/testing/fuzz.go:341 +0x254
+testing.tRunner(0x874e60c38c8, 0x874e60de630)
+	/usr/local/go/src/testing/testing.go:2195 +0xc4
+created by testing.(*F).Fuzz.func1 in goroutine 7
+	/usr/local/go/src/testing/fuzz.go:328 +0x4b8
+FAIL	example.com/config/size	0.007s
+FAIL

@@ -1,0 +1,310 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/so
+runtime: goroutine stack exceeds 1000000000-byte limit
+runtime: sp=0x4020160390 stack=[0x4020160000, 0x4040160000]
+fatal error: stack overflow
+
+runtime stack:
+runtime.throw({0x1cd3d9?, 0x200000001?})
+	/home/builder/sdk/go1.22.12/src/runtime/panic.go:1023 +0x40 fp=0xffffe43e8050 sp=0xffffe43e8020 pc=0x48c90
+runtime.newstack()
+	/home/builder/sdk/go1.22.12/src/runtime/stack.go:1103 +0x460 fp=0xffffe43e8200 sp=0xffffe43e8050 pc=0x66680
+runtime.morestack()
+	/home/builder/sdk/go1.22.12/src/runtime/asm_arm64.s:341 +0x70 fp=0xffffe43e8200 sp=0xffffe43e8200 pc=0x81ca0
+
+goroutine 7 gp=0x40000036c0 m=0 mp=0x32ef20 [running]:
+example.com/q.rec(0xffff97?)
+	/tmp/exp/q/q_test.go:10 +0x3c fp=0x4020160390 sp=0x4020160390 pc=0x17d31c
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201603b0 sp=0x4020160390 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201603d0 sp=0x40201603b0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201603f0 sp=0x40201603d0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160410 sp=0x40201603f0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160430 sp=0x4020160410 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160450 sp=0x4020160430 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160470 sp=0x4020160450 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160490 sp=0x4020160470 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201604b0 sp=0x4020160490 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201604d0 sp=0x40201604b0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201604f0 sp=0x40201604d0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160510 sp=0x40201604f0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160530 sp=0x4020160510 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160550 sp=0x4020160530 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160570 sp=0x4020160550 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160590 sp=0x4020160570 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201605b0 sp=0x4020160590 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201605d0 sp=0x40201605b0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201605f0 sp=0x40201605d0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160610 sp=0x40201605f0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160630 sp=0x4020160610 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160650 sp=0x4020160630 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160670 sp=0x4020160650 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160690 sp=0x4020160670 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201606b0 sp=0x4020160690 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201606d0 sp=0x40201606b0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201606f0 sp=0x40201606d0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160710 sp=0x40201606f0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160730 sp=0x4020160710 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160750 sp=0x4020160730 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160770 sp=0x4020160750 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160790 sp=0x4020160770 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201607b0 sp=0x4020160790 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201607d0 sp=0x40201607b0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201607f0 sp=0x40201607d0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160810 sp=0x40201607f0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160830 sp=0x4020160810 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160850 sp=0x4020160830 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160870 sp=0x4020160850 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160890 sp=0x4020160870 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201608b0 sp=0x4020160890 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201608d0 sp=0x40201608b0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201608f0 sp=0x40201608d0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160910 sp=0x40201608f0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160930 sp=0x4020160910 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160950 sp=0x4020160930 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160970 sp=0x4020160950 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x4020160990 sp=0x4020160970 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x40201609b0 sp=0x4020160990 pc=0x17d300
+...16777021 frames elided...
+example.com/q.rec(0x400012b1b8?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f170 sp=0x404015f150 pc=0x17d300
+example.com/q.rec(0xd0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f190 sp=0x404015f170 pc=0x17d300
+example.com/q.rec(0xffff8c4ca868?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f1b0 sp=0x404015f190 pc=0x17d300
+example.com/q.rec(0x400012b208?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f1d0 sp=0x404015f1b0 pc=0x17d300
+example.com/q.rec(0x400012b258?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f1f0 sp=0x404015f1d0 pc=0x17d300
+example.com/q.rec(0x400012b258?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f210 sp=0x404015f1f0 pc=0x17d300
+example.com/q.rec(0xffff8c4c9828?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f230 sp=0x404015f210 pc=0x17d300
+example.com/q.rec(0xd0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f250 sp=0x404015f230 pc=0x17d300
+example.com/q.rec(0x4000106750?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f270 sp=0x404015f250 pc=0x17d300
+example.com/q.rec(0x400012b318?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f290 sp=0x404015f270 pc=0x17d300
+example.com/q.rec(0x1?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f2b0 sp=0x404015f290 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f2d0 sp=0x404015f2b0 pc=0x17d300
+example.com/q.rec(0x40001067d8?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f2f0 sp=0x404015f2d0 pc=0x17d300
+example.com/q.rec(0x400012b388?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f310 sp=0x404015f2f0 pc=0x17d300
+example.com/q.rec(0x400012b3a0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f330 sp=0x404015f310 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f350 sp=0x404015f330 pc=0x17d300
+example.com/q.rec(0x400012b388?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f370 sp=0x404015f350 pc=0x17d300
+example.com/q.rec(0x32e160?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f390 sp=0x404015f370 pc=0x17d300
+example.com/q.rec(0x4000106680?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f3b0 sp=0x404015f390 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f3d0 sp=0x404015f3b0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f3f0 sp=0x404015f3d0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f410 sp=0x404015f3f0 pc=0x17d300
+example.com/q.rec(0x18?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f430 sp=0x404015f410 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f450 sp=0x404015f430 pc=0x17d300
+example.com/q.rec(0x10?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f470 sp=0x404015f450 pc=0x17d300
+example.com/q.rec(0x400007c518?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f490 sp=0x404015f470 pc=0x17d300
+example.com/q.rec(0x4000105050?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f4b0 sp=0x404015f490 pc=0x17d300
+example.com/q.rec(0x3?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f4d0 sp=0x404015f4b0 pc=0x17d300
+example.com/q.rec(0x2?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f4f0 sp=0x404015f4d0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f510 sp=0x404015f4f0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f530 sp=0x404015f510 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f550 sp=0x404015f530 pc=0x17d300
+example.com/q.rec(0x400006c8a0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f570 sp=0x404015f550 pc=0x17d300
+example.com/q.rec(0xffff8c4c8608?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f590 sp=0x404015f570 pc=0x17d300
+example.com/q.rec(0x400007c5e8?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f5b0 sp=0x404015f590 pc=0x17d300
+example.com/q.rec(0x4000108b40?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f5d0 sp=0x404015f5b0 pc=0x17d300
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f5f0 sp=0x404015f5d0 pc=0x17d300
+example.com/q.rec(0x1c0500?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f610 sp=0x404015f5f0 pc=0x17d300
+example.com/q.rec(0x10?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f630 sp=0x404015f610 pc=0x17d300
+example.com/q.rec(0x40001050e0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f650 sp=0x404015f630 pc=0x17d300
+example.com/q.rec(0x40001050e0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x404015f670 sp=0x404015f650 pc=0x17d300
+example.com/q.FuzzQ.func1(0x400012b718?, {0x400000e549?, 0x0?})
+	/tmp/exp/q/q_test.go:24 +0xb0 fp=0x404015f6e0 sp=0x404015f670 pc=0x17d430
+runtime.call32(0x4000105050, 0x1da9a0, 0x0, 0x0, 0x0, 0x18, 0x404015fa00)
+	/home/builder/sdk/go1.22.12/src/runtime/asm_arm64.s:504 +0x78 fp=0x404015f710 sp=0x404015f6e0 pc=0x82158
+runtime.reflectcall(0x191d20?, 0x4000020590?, 0x4?, 0x1ce7fe?, 0x0?, 0x12?, 0x191d20?)
+	<autogenerated>:1 +0x34 fp=0x404015f750 sp=0x404015f710 pc=0x85b84
+reflect.Value.call({0x1942c0?, 0x1da9a0?, 0x13?}, {0x1cacde, 0x4}, {0x4000105020, 0x2, 0x2?})
+	/home/builder/sdk/go1.22.12/src/reflect/value.go:596 +0x970 fp=0x404015fdc0 sp=0x404015f750 pc=0xcb7e0
+reflect.Value.Call({0x1942c0?, 0x1da9a0?, 0x0?}, {0x4000105020?, 0x1ca2e0?, 0x22c725?})
+	/home/builder/sdk/go1.22.12/src/reflect/value.go:380 +0x94 fp=0x404015fe40 sp=0x404015fdc0 pc=0xcadc4
+testing.(*F).Fuzz.func1.1(0x400011e680?)
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:335 +0x270 fp=0x404015ff60 sp=0x404015fe40 pc=0xf3e70
+testing.tRunner(0x400011e680, 0x400013c5a0)
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:1689 +0xec fp=0x404015ffb0 sp=0x404015ff60 pc=0xfbc7c
+testing.(*F).Fuzz.func1.gowrap1()
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:322 +0x2c fp=0x404015ffd0 sp=0x404015ffb0 pc=0xf3bcc
+runtime.goexit({})
+	/home/builder/sdk/go1.22.12/src/runtime/asm_arm64.s:1222 +0x4 fp=0x404015ffd0 sp=0x404015ffd0 pc=0x83ee4
+created by testing.(*F).Fuzz.func1 in goroutine 6
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:322 +0x49c
+
+goroutine 1 gp=0x40000021c0 m=nil [chan receive]:
+runtime.gopark(0x400012fb38?, 0xf4830?, 0x80?, 0xee?, 0x4000050020?)
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:402 +0xc8 fp=0x400012fa90 sp=0x400012fa70 pc=0x4baa8
+runtime.chanrecv(0x400001c300, 0x0, 0x1)
+	/home/builder/sdk/go1.22.12/src/runtime/chan.go:583 +0x404 fp=0x400012fb10 sp=0x400012fa90 pc=0x163b4
+runtime.chanrecv1(0x1cad3e?, 0x1cad3e?)
+	/home/builder/sdk/go1.22.12/src/runtime/chan.go:442 +0x14 fp=0x400012fb40 sp=0x400012fb10 pc=0x15f74
+testing.runFuzzTests({0x2113e0, 0x393ec0}, {0x3242a0, 0x1, 0x400007cd18?}, {0xe1b60?, 0x32e340?, 0x32e340?})
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:528 +0x720 fp=0x400012fc80 sp=0x400012fb40 pc=0xf4890
+testing.(*M).Run(0x40001000a0)
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:2028 +0x5dc fp=0x400012feb0 sp=0x400012fc80 pc=0xfd42c
+main.main()
+	_testmain.go:47 +0x16c fp=0x400012ff40 sp=0x400012feb0 pc=0x17d7dc
+runtime.main()
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:271 +0x28c fp=0x400012ffd0 sp=0x400012ff40 pc=0x4b64c
+runtime.goexit({})
+	/home/builder/sdk/go1.22.12/src/runtime/asm_arm64.s:1222 +0x4 fp=0x400012ffd0 sp=0x400012ffd0 pc=0x83ee4
+
+goroutine 2 gp=0x4000002700 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:402 +0xc8 fp=0x400004cf90 sp=0x400004cf70 pc=0x4baa8
+runtime.goparkunlock(...)
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:408
+runtime.forcegchelper()
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:326 +0xb8 fp=0x400004cfd0 sp=0x400004cf90 pc=0x4b908
+runtime.goexit({})
+	/home/builder/sdk/go1.22.12/src/runtime/asm_arm64.s:1222 +0x4 fp=0x400004cfd0 sp=0x400004cfd0 pc=0x83ee4
+created by runtime.init.6 in goroutine 1
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:314 +0x24
+
+goroutine 3 gp=0x4000002c40 m=nil [GC sweep wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:402 +0xc8 fp=0x400004d760 sp=0x400004d740 pc=0x4baa8
+runtime.goparkunlock(...)
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:408
+runtime.bgsweep(0x400001e070)
+	/home/builder/sdk/go1.22.12/src/runtime/mgcsweep.go:278 +0xa0 fp=0x400004d7b0 sp=0x400004d760 pc=0x35d30
+runtime.gcenable.gowrap1()
+	/home/builder/sdk/go1.22.12/src/runtime/mgc.go:203 +0x28 fp=0x400004d7d0 sp=0x400004d7b0 pc=0x29f48
+runtime.goexit({})
+	/home/builder/sdk/go1.22.12/src/runtime/asm_arm64.s:1222 +0x4 fp=0x400004d7d0 sp=0x400004d7d0 pc=0x83ee4
+created by runtime.gcenable in goroutine 1
+	/home/builder/sdk/go1.22.12/src/runtime/mgc.go:203 +0x6c
+
+goroutine 4 gp=0x4000002e00 m=nil [GC scavenge wait]:
+runtime.gopark(0x400001e070?, 0x20c810?, 0x1?, 0x0?, 0x4000002e00?)
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:402 +0xc8 fp=0x400004df60 sp=0x400004df40 pc=0x4baa8
+runtime.goparkunlock(...)
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:408
+runtime.(*scavengerState).park(0x32e460)
+	/home/builder/sdk/go1.22.12/src/runtime/mgcscavenge.go:425 +0x5c fp=0x400004df90 sp=0x400004df60 pc=0x3372c
+runtime.bgscavenge(0x400001e070)
+	/home/builder/sdk/go1.22.12/src/runtime/mgcscavenge.go:653 +0x44 fp=0x400004dfb0 sp=0x400004df90 pc=0x33c74
+runtime.gcenable.gowrap2()
+	/home/builder/sdk/go1.22.12/src/runtime/mgc.go:204 +0x28 fp=0x400004dfd0 sp=0x400004dfb0 pc=0x29ee8
+runtime.goexit({})
+	/home/builder/sdk/go1.22.12/src/runtime/asm_arm64.s:1222 +0x4 fp=0x400004dfd0 sp=0x400004dfd0 pc=0x83ee4
+created by runtime.gcenable in goroutine 1
+	/home/builder/sdk/go1.22.12/src/runtime/mgc.go:204 +0xac
+
+goroutine 5 gp=0x4000003340 m=nil [finalizer wait]:
+runtime.gopark(0x0?, 0x0?, 0xb8?, 0xc5?, 0x7f704?)
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:402 +0xc8 fp=0x400004c580 sp=0x400004c560 pc=0x4baa8
+runtime.runfinq()
+	/home/builder/sdk/go1.22.12/src/runtime/mfinal.go:194 +0x108 fp=0x400004c7d0 sp=0x400004c580 pc=0x29018
+runtime.goexit({})
+	/home/builder/sdk/go1.22.12/src/runtime/asm_arm64.s:1222 +0x4 fp=0x400004c7d0 sp=0x400004c7d0 pc=0x83ee4
+created by runtime.createfing in goroutine 1
+	/home/builder/sdk/go1.22.12/src/runtime/mfinal.go:164 +0x80
+
+goroutine 6 gp=0x4000003500 m=nil [chan receive]:
+runtime.gopark(0x4000131b38?, 0xf3904?, 0x80?, 0xee?, 0x4000050020?)
+	/home/builder/sdk/go1.22.12/src/runtime/proc.go:402 +0xc8 fp=0x4000131a90 sp=0x4000131a70 pc=0x4baa8
+runtime.chanrecv(0x400001c420, 0x0, 0x1)
+	/home/builder/sdk/go1.22.12/src/runtime/chan.go:583 +0x404 fp=0x4000131b10 sp=0x4000131a90 pc=0x163b4
+runtime.chanrecv1(0x400000ec68?, 0x400000ec68?)
+	/home/builder/sdk/go1.22.12/src/runtime/chan.go:442 +0x14 fp=0x4000131b40 sp=0x4000131b10 pc=0x15f74
+testing.(*F).Fuzz.func1({0x20eec0, 0x400013e000}, {{0x0, 0x0}, {0x40000181c8, 0x16}, {0x0, 0x0, 0x0}, {0x40000205a0, ...}, ...})
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:337 +0x4ac fp=0x4000131c40 sp=0x4000131b40 pc=0xf3a2c
+testing.(*F).Fuzz(0x400013e000, {0x1942c0, 0x1da9a0})
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:402 +0x858 fp=0x4000131f30 sp=0x4000131c40 pc=0xf3068
+example.com/q.FuzzQ(0x400013e000?)
+	/tmp/exp/q/q_test.go:17 +0x2c fp=0x4000131f60 sp=0x4000131f30 pc=0x17d35c
+testing.fRunner(0x400013e000, 0x1da8c0)
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:724 +0xbc fp=0x4000131fb0 sp=0x4000131f60 pc=0xf529c
+testing.runFuzzTests.gowrap1()
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:527 +0x2c fp=0x4000131fd0 sp=0x4000131fb0 pc=0xf49dc
+runtime.goexit({})
+	/home/builder/sdk/go1.22.12/src/runtime/asm_arm64.s:1222 +0x4 fp=0x4000131fd0 sp=0x4000131fd0 pc=0x83ee4
+created by testing.runFuzzTests in goroutine 1
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:527 +0x710

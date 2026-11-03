@@ -1,0 +1,10 @@
+fuzzsift: github.com/pelletier/go-toml/v2, 1 fuzz target, 11 corpus entries
+Each entry ran alone with a 10s timeout. Each failure ran twice.
+
+FuzzUnmarshal: 11 entries, 10 pass, 1 skipped
+
+  Pass now: 0c08b924aa26af23d16b77029b4f5567a96af93402e0472fef7b837b37580d7c, 249a017d8ffa0d88d41c594ada5399f764833f64050180cb39f106d12666853f, 391ce67b866d58464d067c5981e99951fd499896453a2fe2779a6bfe7df11bf5, 49ae83283c5cfbed874bcacbfb342de107b69c2a3d3c35c2d99f67345fe89946, 69ea82e85bb4ad966ae86bb05eea3af69ed1a826c846f1bf2282f329b4d8fb36, 746910fac6deb42e7e62dce60b333c81c39d844a122c9075894c023400e8fdbf, 844d1171a3adc95e51627f0e9378bbaa193fe2d0284f4ba8ed19a5226a8cbc74, 900c54b5071113ae2a5365b3156377ddd775b9d38add61629544903cb9c94b00, c87e8eb4e8fa40fd3c89d8ed16a049ce81592ded710965ee29a4e506eb5427b3, d0e5d6fc3b865cfae5480c01f301b87c932722ae0c1d692deea413349ea028be
+  Skipped by the target: d2cecea5b8ee5f148419671cef0644178cdba1ee91d3f295be38da576e89ef40
+
+No entry fails: 10 of 11 pass and 1 skipped. 13 test binary runs.
+That covers these entries only. It doesn't show the code has no bugs.

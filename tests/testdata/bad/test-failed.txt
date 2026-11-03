@@ -1,0 +1,7 @@
+# example.com/config/size [example.com/config/size.test]
+size/size.go:55:24: too many return values
+	have (number)
+	want ()
+ok  	example.com/config/addr	0.002s
+FAIL	example.com/config/size [build failed]
+FAIL

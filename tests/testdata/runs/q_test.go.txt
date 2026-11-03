@@ -1,0 +1,39 @@
+package q
+
+import (
+	"log"
+	"os"
+	"testing"
+	"time"
+)
+
+func rec(n int) int { return rec(n+1) + 1 }
+
+type T struct{ m map[string]int }
+
+func (t *T) Set(k string) { t.m[k] = 1 }
+
+func FuzzQ(f *testing.F) {
+	f.Fuzz(func(t *testing.T, s string) {
+		switch s {
+		case "hang":
+			for {
+				time.Sleep(time.Millisecond)
+			}
+		case "so":
+			rec(0)
+		case "logfatal":
+			log.Fatal("boom")
+		case "exit0":
+			os.Exit(0)
+		case "skip":
+			t.Skip("not this one")
+		case "fatal":
+			t.Log("before")
+			t.Fatalf("bad value %q at %d", s, 7)
+		case "nilmap":
+			(&T{}).Set(s)
+		case "ok":
+		}
+	})
+}

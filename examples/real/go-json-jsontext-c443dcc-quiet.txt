@@ -1,0 +1,9 @@
+fuzzsift: github.com/goccy/go-json/jsontext, 1 fuzz target, 35 corpus entries
+Each entry ran alone with a 10s timeout. Each failure ran twice.
+
+FuzzStdDiff: 35 entries, 35 pass
+
+  Pass now: 00326e1a38a2651e, 0d153ee129eb3f68, 2759794c7a7f02f1, 27b762bc81d181bf, 27d9ad5ce3007e2f, 28731c901e37d1c2, 2a7171e484238b85, 2b56a519efcb882d, 40726a0390c490d8, 451eb85e842a464c, and 25 more
+
+No entry fails: 35 of 35 pass. 37 test binary runs.
+That covers these entries only. It doesn't show the code has no bugs.

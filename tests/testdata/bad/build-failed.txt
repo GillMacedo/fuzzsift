@@ -1,0 +1,4 @@
+# example.com/config/size
+size/size.go:55:24: too many return values
+	have (number)
+	want ()

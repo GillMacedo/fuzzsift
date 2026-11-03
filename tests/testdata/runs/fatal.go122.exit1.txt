@@ -1,0 +1,7 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/fatal
+    q_test.go:32: before
+    q_test.go:33: bad value "fatal" at 7
+--- FAIL: FuzzQ (0.00s)
+    --- FAIL: FuzzQ/fatal (0.00s)
+FAIL

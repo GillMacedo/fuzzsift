@@ -1,0 +1,3 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/logfatal
+2026/11/03 15:29:55 boom

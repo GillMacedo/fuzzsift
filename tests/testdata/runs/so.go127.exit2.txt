@@ -1,0 +1,310 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/so
+runtime: goroutine stack exceeds 1000000000-byte limit
+runtime: sp=0x5c284ff603a0 stack=[0x5c284ff60000, 0x5c286ff60000]
+fatal error: stack overflow
+
+runtime stack:
+runtime.throw({0x1e2ff0?, 0x60d5c?})
+	/usr/local/go/src/runtime/panic.go:1243 +0x38 fp=0xffffcabcc760 sp=0xffffcabcc730 pc=0x935e8
+runtime.newstack()
+	/usr/local/go/src/runtime/stack.go:1207 +0x480 fp=0xffffcabcc890 sp=0xffffcabcc760 pc=0x757e0
+runtime.morestack()
+	/usr/local/go/src/runtime/asm_arm64.s:487 +0x70 fp=0xffffcabcc890 sp=0xffffcabcc890 pc=0x98310
+
+goroutine 7 gp=0x5c282fdc7860 m=0 mp=0x416820 [running]:
+example.com/q.rec(0x1ffff37?)
+	/tmp/exp/q/q_test.go:10 +0x3c fp=0x5c284ff603a0 sp=0x5c284ff603a0 pc=0x1cd23c
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff603c0 sp=0x5c284ff603a0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff603e0 sp=0x5c284ff603c0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60400 sp=0x5c284ff603e0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60420 sp=0x5c284ff60400 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60440 sp=0x5c284ff60420 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60460 sp=0x5c284ff60440 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60480 sp=0x5c284ff60460 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff604a0 sp=0x5c284ff60480 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff604c0 sp=0x5c284ff604a0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff604e0 sp=0x5c284ff604c0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60500 sp=0x5c284ff604e0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60520 sp=0x5c284ff60500 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60540 sp=0x5c284ff60520 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60560 sp=0x5c284ff60540 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60580 sp=0x5c284ff60560 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff605a0 sp=0x5c284ff60580 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff605c0 sp=0x5c284ff605a0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff605e0 sp=0x5c284ff605c0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60600 sp=0x5c284ff605e0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60620 sp=0x5c284ff60600 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60640 sp=0x5c284ff60620 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60660 sp=0x5c284ff60640 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff60680 sp=0x5c284ff60660 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c284ff606a0 sp=0x5c284ff60680 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+...33554141 frames elided...
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x5c282ff0f4d8?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f4a0 sp=0x5c286ff5f480 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x5c282fde6c01?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f4c0 sp=0x5c286ff5f4a0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x415620?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f4e0 sp=0x5c286ff5f4c0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x3ca980?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f500 sp=0x5c286ff5f4e0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f520 sp=0x5c286ff5f500 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f540 sp=0x5c286ff5f520 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f560 sp=0x5c286ff5f540 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x18?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f580 sp=0x5c286ff5f560 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f5a0 sp=0x5c286ff5f580 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x5c282fe52598?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f5c0 sp=0x5c286ff5f5a0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x5c282ff2c000?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f5e0 sp=0x5c286ff5f5c0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x5c282fe52628?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f600 sp=0x5c286ff5f5e0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x5c282ff36000?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f620 sp=0x5c286ff5f600 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x2?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f640 sp=0x5c286ff5f620 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f660 sp=0x5c286ff5f640 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f680 sp=0x5c286ff5f660 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f6a0 sp=0x5c286ff5f680 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x18?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f6c0 sp=0x5c286ff5f6a0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x0?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f6e0 sp=0x5c286ff5f6c0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.rec(0x3?)
+	/tmp/exp/q/q_test.go:10 +0x20 fp=0x5c286ff5f700 sp=0x5c286ff5f6e0 pc=0x1cd220
+example.com/q.rec(...)
+	/tmp/exp/q/q_test.go:10
+example.com/q.FuzzQ.func1(0x5c282ff0f7a8?, {0x5c282fdd44f9?, 0x0?})
+	/tmp/exp/q/q_test.go:24 +0xa8 fp=0x5c286ff5f770 sp=0x5c286ff5f700 pc=0x1cd348
+runtime.call32(0x5c282ff320c0, 0x3e3450, 0x0, 0x0, 0x0, 0x18, 0x5c286ff5f9d8)
+	/usr/local/go/src/runtime/asm_arm64.s:650 +0x70 fp=0x5c286ff5f7a0 sp=0x5c286ff5f770 pc=0x987a0
+runtime.reflectcall(0x3b6988?, 0x5c282fde6840?, 0x4?, 0x1e47e8?, 0x0?, 0x12?, 0x3b6988?)
+	<autogenerated>:1 +0x24 fp=0x5c286ff5f7e0 sp=0x5c286ff5f7a0 pc=0x9b8f4
+reflect.Value.call({0x3a1bc0?, 0x3e3450?, 0x13?}, {0x1e0375, 0x4}, {0x5c282ff32090, 0x2, 0x2?})
+	/usr/local/go/src/reflect/value.go:586 +0xa88 fp=0x5c286ff5fdb0 sp=0x5c286ff5f7e0 pc=0xddb88
+reflect.Value.Call({0x3a1bc0?, 0x3e3450?, 0x112860?}, {0x5c282ff32090?, 0x3dfca0?, 0x3cf298?})
+	/usr/local/go/src/reflect/value.go:369 +0x94 fp=0x5c286ff5fe30 sp=0x5c286ff5fdb0 pc=0xdd064
+testing.(*F).Fuzz.func1.1(0x5c282ff22248?)
+	/usr/local/go/src/testing/fuzz.go:341 +0x254 fp=0x5c286ff5ff60 sp=0x5c286ff5fe30 pc=0x116a74
+testing.tRunner(0x5c282ff22248, 0x5c282ff205a0)
+	/usr/local/go/src/testing/testing.go:2195 +0xc4 fp=0x5c286ff5ffb0 sp=0x5c286ff5ff60 pc=0x112924
+testing.(*F).Fuzz.func1.gowrap1()
+	/usr/local/go/src/testing/fuzz.go:328 +0x20 fp=0x5c286ff5ffd0 sp=0x5c286ff5ffb0 pc=0x116800
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x5c286ff5ffd0 sp=0x5c286ff5ffd0 pc=0x9a114
+created by testing.(*F).Fuzz.func1 in goroutine 6
+	/usr/local/go/src/testing/fuzz.go:328 +0x4b8
+
+goroutine 1 gp=0x5c282fdc61e0 m=nil [chan receive]:
+runtime.gopark(0x5c282ff13a98?, 0x10c3dc?, 0x90?, 0x13?, 0x5c282fdc4058?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x5c282ff139f0 sp=0x5c282ff139d0 pc=0x936f8
+runtime.chanrecv(0x5c282fde42a0, 0x0, 0x1)
+	/usr/local/go/src/runtime/chan.go:667 +0x470 fp=0x5c282ff13a70 sp=0x5c282ff139f0 pc=0x24b10
+runtime.chanrecv1(0x18?, 0x3c7ca8?)
+	/usr/local/go/src/runtime/chan.go:509 +0x14 fp=0x5c282ff13aa0 sp=0x5c282ff13a70 pc=0x24664
+testing.runFuzzTests({0x3e3198, 0x43c0a0}, {0x40a2e8, 0x1, 0x5c282fdd2300?}, {0x43c0a0?, 0x0?, 0x4158c0?})
+	/usr/local/go/src/testing/fuzz.go:538 +0x74c fp=0x5c282ff13be0 sp=0x5c282ff13aa0 pc=0x10c43c
+testing.(*M).Run(0x5c282fe56960)
+	/usr/local/go/src/testing/testing.go:2603 +0x5a0 fp=0x5c282ff13e20 sp=0x5c282ff13be0 pc=0x1138f0
+main.main()
+	_testmain.go:46 +0x80 fp=0x5c282ff13ea0 sp=0x5c282ff13e20 pc=0x1cd600
+runtime.main()
+	/usr/local/go/src/runtime/proc.go:302 +0x380 fp=0x5c282ff13fd0 sp=0x5c282ff13ea0 pc=0x5c030
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x5c282ff13fd0 sp=0x5c282ff13fd0 pc=0x9a114
+
+goroutine 2 gp=0x5c282fdc6780 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x5c282fe20f90 sp=0x5c282fe20f70 pc=0x936f8
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.forcegchelper()
+	/usr/local/go/src/runtime/proc.go:387 +0xb4 fp=0x5c282fe20fd0 sp=0x5c282fe20f90 pc=0x5c314
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x5c282fe20fd0 sp=0x5c282fe20fd0 pc=0x9a114
+created by runtime.init.7 in goroutine 1
+	/usr/local/go/src/runtime/proc.go:375 +0x24
+
+goroutine 3 gp=0x5c282fdc6d20 m=nil [GC sweep wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x5c282fe21770 sp=0x5c282fe21750 pc=0x936f8
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.bgsweep(0x5c282fe40000)
+	/usr/local/go/src/runtime/mgcsweep.go:279 +0x9c fp=0x5c282fe217b0 sp=0x5c282fe21770 pc=0x4640c
+runtime.gcenable.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:214 +0x20 fp=0x5c282fe217d0 sp=0x5c282fe217b0 pc=0x89d90
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x5c282fe217d0 sp=0x5c282fe217d0 pc=0x9a114
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:214 +0x6c
+
+goroutine 4 gp=0x5c282fdc6f00 m=nil [GC scavenge wait]:
+runtime.gopark(0x5c282fe40000?, 0x1f3840?, 0x1?, 0x0?, 0x5c282fdc6f00?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x5c282fe21f60 sp=0x5c282fe21f40 pc=0x936f8
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.(*scavengerState).park(0x415940)
+	/usr/local/go/src/runtime/mgcscavenge.go:425 +0x5c fp=0x5c282fe21f90 sp=0x5c282fe21f60 pc=0x4407c
+runtime.bgscavenge(0x5c282fe40000)
+	/usr/local/go/src/runtime/mgcscavenge.go:653 +0x44 fp=0x5c282fe21fb0 sp=0x5c282fe21f90 pc=0x44584
+runtime.gcenable.gowrap2()
+	/usr/local/go/src/runtime/mgc.go:215 +0x20 fp=0x5c282fe21fd0 sp=0x5c282fe21fb0 pc=0x89d50
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x5c282fe21fd0 sp=0x5c282fe21fd0 pc=0x9a114
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:215 +0xac
+
+goroutine 5 gp=0x5c282fdc74a0 m=nil [finalizer wait]:
+runtime.gopark(0x15?, 0xffff82d4e138?, 0x20?, 0x68?, 0x24b10?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x5c282fe20580 sp=0x5c282fe20560 pc=0x936f8
+runtime.runFinalizers()
+	/usr/local/go/src/runtime/mfinal.go:210 +0x100 fp=0x5c282fe207d0 sp=0x5c282fe20580 pc=0x376b0
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x5c282fe207d0 sp=0x5c282fe207d0 pc=0x9a114
+created by runtime.createfing in goroutine 1
+	/usr/local/go/src/runtime/mfinal.go:172 +0x78
+
+goroutine 6 gp=0x5c282fdc7680 m=nil [chan receive]:
+runtime.gopark(0x5c282ff15b98?, 0x1165a8?, 0x90?, 0x13?, 0xffff82d58dc0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x5c282ff15af0 sp=0x5c282ff15ad0 pc=0x936f8
+runtime.chanrecv(0x5c282fde4460, 0x0, 0x1)
+	/usr/local/go/src/runtime/chan.go:667 +0x470 fp=0x5c282ff15b70 sp=0x5c282ff15af0 pc=0x24b10
+runtime.chanrecv1(0x18?, 0x3c7dd8?)
+	/usr/local/go/src/runtime/chan.go:509 +0x14 fp=0x5c282ff15ba0 sp=0x5c282ff15b70 pc=0x24664
+testing.(*F).Fuzz.func1({0x3e1410, 0x5c282ff18788}, {{0x0, 0x0}, {0x5c282fdde108, 0x16}, {0x0, 0x0, 0x0}, {0x5c282fde6850, ...}, ...})
+	/usr/local/go/src/testing/fuzz.go:343 +0x4c8 fp=0x5c282ff15cb0 sp=0x5c282ff15ba0 pc=0x1166b8
+testing.(*F).Fuzz(0x5c282ff18788, {0x3a1bc0, 0x3e3450})
+	/usr/local/go/src/testing/fuzz.go:408 +0x790 fp=0x5c282ff15f30 sp=0x5c282ff15cb0 pc=0x10b7d0
+example.com/q.FuzzQ(0x5c282ff18788?)
+	/tmp/exp/q/q_test.go:17 +0x2c fp=0x5c282ff15f60 sp=0x5c282ff15f30 pc=0x1cd27c
+testing.fRunner(0x5c282ff18788, 0x3e33a0)
+	/usr/local/go/src/testing/fuzz.go:738 +0xa0 fp=0x5c282ff15fb0 sp=0x5c282ff15f60 pc=0x10cd80
+testing.runFuzzTests.gowrap1()
+	/usr/local/go/src/testing/fuzz.go:537 +0x20 fp=0x5c282ff15fd0 sp=0x5c282ff15fb0 pc=0x116b20
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x5c282ff15fd0 sp=0x5c282ff15fd0 pc=0x9a114
+created by testing.runFuzzTests in goroutine 1
+	/usr/local/go/src/testing/fuzz.go:537 +0x73c

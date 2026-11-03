@@ -1,0 +1,14 @@
+{
+  "name": "fuzzsift-marketplace",
+  "description": "Marketplace for fuzzsift, which triages Go fuzz crashers by running each corpus entry alone and grouping the failures.",
+  "owner": {
+    "name": "Giulliano Macedo"
+  },
+  "plugins": [
+    {
+      "name": "fuzzsift",
+      "source": "./plugin",
+      "description": "Run each go test -fuzz corpus entry alone, group the failures, and get the smallest entry and a reproduce command for each."
+    }
+  ]
+}

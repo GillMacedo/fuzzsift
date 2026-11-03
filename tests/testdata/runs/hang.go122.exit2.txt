@@ -1,0 +1,45 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/hang
+panic: test timed out after 1s
+
+goroutine 17 [running]:
+testing.(*M).startAlarm.func1()
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:2366 +0x30c
+created by time.goFunc
+	/home/builder/sdk/go1.22.12/src/time/sleep.go:177 +0x38
+
+goroutine 1 [chan receive]:
+testing.runFuzzTests({0x2113e0, 0x393ec0}, {0x3242a0, 0x1, 0x400007cd18?}, {0xe1b60?, 0x32e340?, 0x32e340?})
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:528 +0x720
+testing.(*M).Run(0x40001000a0)
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:2028 +0x5dc
+main.main()
+	_testmain.go:47 +0x16c
+
+goroutine 6 [chan receive]:
+testing.(*F).Fuzz.func1({0x20eec0, 0x400013c400}, {{0x0, 0x0}, {0x40000180a8, 0x18}, {0x0, 0x0, 0x0}, {0x4000020410, ...}, ...})
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:337 +0x4ac
+testing.(*F).Fuzz(0x400013c400, {0x1942c0, 0x1da9a0})
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:402 +0x858
+example.com/q.FuzzQ(0x400013c400?)
+	/tmp/exp/q/q_test.go:17 +0x2c
+testing.fRunner(0x400013c400, 0x1da8c0)
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:724 +0xbc
+created by testing.runFuzzTests in goroutine 1
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:527 +0x710
+
+goroutine 7 [runnable]:
+time.Sleep(0xf4240)
+	/home/builder/sdk/go1.22.12/src/runtime/time.go:195 +0xfc
+example.com/q.FuzzQ.func1(0x400012b718?, {0x400000e4d7?, 0x0?})
+	/tmp/exp/q/q_test.go:21 +0x258
+reflect.Value.call({0x1942c0?, 0x1da9a0?, 0x13?}, {0x1cacde, 0x4}, {0x4000104a80, 0x2, 0x2?})
+	/home/builder/sdk/go1.22.12/src/reflect/value.go:596 +0x970
+reflect.Value.Call({0x1942c0?, 0x1da9a0?, 0x0?}, {0x4000104a80?, 0x1ca2e0?, 0x22c725?})
+	/home/builder/sdk/go1.22.12/src/reflect/value.go:380 +0x94
+testing.(*F).Fuzz.func1.1(0x400011e680?)
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:335 +0x270
+testing.tRunner(0x400011e680, 0x400014a000)
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:1689 +0xec
+created by testing.(*F).Fuzz.func1 in goroutine 6
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:322 +0x49c

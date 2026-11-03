@@ -1,0 +1,28 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/nilmap
+--- FAIL: FuzzQ (0.00s)
+    --- FAIL: FuzzQ/nilmap (0.00s)
+panic: assignment to entry in nil map [recovered]
+	panic: assignment to entry in nil map
+
+goroutine 7 [running]:
+testing.tRunner.func1.2({0x19b960, 0x20e0d0})
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:1631 +0x1c4
+testing.tRunner.func1()
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:1634 +0x33c
+panic({0x19b960?, 0x20e0d0?})
+	/home/builder/sdk/go1.22.12/src/runtime/panic.go:770 +0x124
+example.com/q.(*T).Set(...)
+	/tmp/exp/q/q_test.go:14
+example.com/q.FuzzQ.func1(0x400012b718?, {0x400000e581?, 0x0?})
+	/tmp/exp/q/q_test.go:35 +0x1e4
+reflect.Value.call({0x1942c0?, 0x1da9a0?, 0x13?}, {0x1cacde, 0x4}, {0x4000104cc0, 0x2, 0x2?})
+	/home/builder/sdk/go1.22.12/src/reflect/value.go:596 +0x970
+reflect.Value.Call({0x1942c0?, 0x1da9a0?, 0x0?}, {0x4000104cc0?, 0x1ca2e0?, 0x22c725?})
+	/home/builder/sdk/go1.22.12/src/reflect/value.go:380 +0x94
+testing.(*F).Fuzz.func1.1(0x400011e680?)
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:335 +0x270
+testing.tRunner(0x400011e680, 0x400014e000)
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:1689 +0xec
+created by testing.(*F).Fuzz.func1 in goroutine 6
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:322 +0x49c

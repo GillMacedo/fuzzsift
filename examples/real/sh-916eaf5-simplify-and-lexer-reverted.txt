@@ -1,0 +1,11 @@
+fuzzsift: mvdan.cc/sh/v3/syntax, 2 fuzz targets, 12 corpus entries
+Each entry ran alone with a 10s timeout. Each failure ran twice.
+
+Not triaged (4 entries):
+  FuzzParsePrint: FuzzParsePrint fails with no corpus entries (in its f.Add seeds or its setup), so a failing entry can't be told apart from that: panic: test timed out after 10s
+
+FuzzQuote: 8 entries, 8 skipped
+
+  Skipped by the target: 23cf0175e40438e8033b11cdd1441a2d2893a99144c4ac0f2b5f4caa113c9edd, 25f36feab4af00bc4dfc3cf56da02b842b62ba8c5ac44862b5b3b776a0d519b4, 2788bd30d386289e06a1024a030ad5ab7f363c703bea8a5d035de174491029bf, 39d5fdf93d52b2cd50fb9582b27c82d159de0575623865538ced2a7780499fa6, 6fcce067200fb8ae6d4c2b1b7c1f55d3f7e4b38f4ee4f05e50e496a7c399f2d8, b26cd471412059c6ab6aa27b6153d42d2d00cbb00ad11d3cd88a192a7dfd2cdf, df6b5d69da50c7d58ca13f6dde15e2a7224a53ce7bd72a02d49893e580b6775b, ea14da9b0299f4463c20659e2a51808fef8d5fb0de6324f0de64153511d4b1f8
+
+Incomplete: 4 of 12 entries were not triaged, so this is not a full result.

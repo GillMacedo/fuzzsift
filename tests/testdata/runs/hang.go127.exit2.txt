@@ -1,0 +1,45 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/hang
+panic: test timed out after 1s
+
+goroutine 5 [running]:
+testing.(*M).startAlarm.func1()
+	/usr/local/go/src/testing/testing.go:2961 +0x2c4
+created by time.goFunc
+	/usr/local/go/src/time/sleep.go:182 +0x38
+
+goroutine 1 [chan receive]:
+testing.runFuzzTests({0x3e3198, 0x43c0a0}, {0x40a2e8, 0x1, 0x4522914a62e8?}, {0x43c0a0?, 0x0?, 0x4158c0?})
+	/usr/local/go/src/testing/fuzz.go:538 +0x74c
+testing.(*M).Run(0x4522914a4640)
+	/usr/local/go/src/testing/testing.go:2603 +0x5a0
+main.main()
+	_testmain.go:46 +0x80
+
+goroutine 18 [chan receive]:
+testing.(*F).Fuzz.func1({0x3e1410, 0x4522914fe788}, {{0x0, 0x0}, {0x45229150c030, 0x18}, {0x0, 0x0, 0x0}, {0x4522914aa680, ...}, ...})
+	/usr/local/go/src/testing/fuzz.go:343 +0x4c8
+testing.(*F).Fuzz(0x4522914fe788, {0x3a1bc0, 0x3e3450})
+	/usr/local/go/src/testing/fuzz.go:408 +0x790
+example.com/q.FuzzQ(0x4522914fe788?)
+	/tmp/exp/q/q_test.go:17 +0x2c
+testing.fRunner(0x4522914fe788, 0x3e33a0)
+	/usr/local/go/src/testing/fuzz.go:738 +0xa0
+created by testing.runFuzzTests in goroutine 1
+	/usr/local/go/src/testing/fuzz.go:537 +0x73c
+
+goroutine 19 [sleep]:
+time.Sleep(0xf4240)
+	/usr/local/go/src/runtime/time.go:368 +0x150
+example.com/q.FuzzQ.func1(0x4522914f17a8?, {0x4522914a23f1?, 0x0?})
+	/tmp/exp/q/q_test.go:21 +0x23c
+reflect.Value.call({0x3a1bc0?, 0x3e3450?, 0x13?}, {0x1e0375, 0x4}, {0x4522914a99e0, 0x2, 0x2?})
+	/usr/local/go/src/reflect/value.go:586 +0xa88
+reflect.Value.Call({0x3a1bc0?, 0x3e3450?, 0x112860?}, {0x4522914a99e0?, 0x3dfca0?, 0x3cf298?})
+	/usr/local/go/src/reflect/value.go:369 +0x94
+testing.(*F).Fuzz.func1.1(0x452291508248?)
+	/usr/local/go/src/testing/fuzz.go:341 +0x254
+testing.tRunner(0x452291508248, 0x452291516000)
+	/usr/local/go/src/testing/testing.go:2195 +0xc4
+created by testing.(*F).Fuzz.func1 in goroutine 18
+	/usr/local/go/src/testing/fuzz.go:328 +0x4b8

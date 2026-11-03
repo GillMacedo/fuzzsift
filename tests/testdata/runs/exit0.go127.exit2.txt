@@ -1,0 +1,27 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/exit0
+--- FAIL: FuzzQ (0.00s)
+    --- FAIL: FuzzQ/exit0 (0.00s)
+panic: unexpected call to os.Exit(0) during test [recovered, repanicked]
+
+goroutine 19 [running]:
+testing.tRunner.func1.2({0x3b6988, 0x1f45d8})
+	/usr/local/go/src/testing/testing.go:2125 +0x1a0
+testing.tRunner.func1()
+	/usr/local/go/src/testing/testing.go:2128 +0x2c8
+panic({0x3b6988?, 0x1f45d8?})
+	/usr/local/go/src/runtime/panic.go:859 +0x120
+os.Exit(0x0)
+	/usr/local/go/src/os/proc.go:67 +0x58
+example.com/q.FuzzQ.func1(0x7475603f17a8?, {0x7475603a23c1?, 0x0?})
+	/tmp/exp/q/q_test.go:28 +0xdc
+reflect.Value.call({0x3a1bc0?, 0x3e3450?, 0x13?}, {0x1e0375, 0x4}, {0x7475603a97a0, 0x2, 0x2?})
+	/usr/local/go/src/reflect/value.go:586 +0xa88
+reflect.Value.Call({0x3a1bc0?, 0x3e3450?, 0x112860?}, {0x7475603a97a0?, 0x3dfca0?, 0x3cf298?})
+	/usr/local/go/src/reflect/value.go:369 +0x94
+testing.(*F).Fuzz.func1.1(0x747560406248?)
+	/usr/local/go/src/testing/fuzz.go:341 +0x254
+testing.tRunner(0x747560406248, 0x747560416000)
+	/usr/local/go/src/testing/testing.go:2195 +0xc4
+created by testing.(*F).Fuzz.func1 in goroutine 18
+	/usr/local/go/src/testing/fuzz.go:328 +0x4b8

@@ -1,0 +1,36 @@
+[
+  {
+    "skills": ["triaging-go-fuzz-crashers"],
+    "query": "Nightly fuzzing left 9 files in ./parser/testdata/fuzz/FuzzParse. How many different bugs are these?",
+    "expected_behavior": [
+      "Runs fuzzsift.go on ./parser",
+      "Reports the number of distinct failures and failing entries, with the frame and smallest entry of each group",
+      "Says the groups are by symptom and reads the code at each frame before saying how many bugs there are"
+    ]
+  },
+  {
+    "skills": ["triaging-go-fuzz-crashers"],
+    "query": "CI uploaded fuzz crashers to ./artifacts/FuzzDecode. Do they still fail against ./codec on my branch?",
+    "expected_behavior": [
+      "Runs fuzzsift.go with -corpus ./artifacts/FuzzDecode on ./codec, without copying the files into the repo",
+      "Lists which entries fail and which pass now, with a reproduce command for each failing group"
+    ]
+  },
+  {
+    "skills": ["triaging-go-fuzz-crashers"],
+    "query": "go test says a file in testdata/fuzz/FuzzLoad is malformed. Which one, and does anything else fail?",
+    "expected_behavior": [
+      "Runs fuzzsift.go on the package",
+      "Names the unreadable file from the Not triaged section and explains that go test fails every FuzzLoad entry while it is there",
+      "Reports the results of the other entries, and doesn't call the run clean because it exited 2"
+    ]
+  },
+  {
+    "skills": ["triaging-go-fuzz-crashers"],
+    "query": "fuzzsift said No entry fails for ./lexer. Is the lexer safe now?",
+    "expected_behavior": [
+      "Explains that only the entries in the corpus were checked",
+      "Suggests fuzzing again to look for new bugs, and keeping the passing entries as regression seeds"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/exit0
+--- FAIL: FuzzQ (0.00s)
+    --- FAIL: FuzzQ/exit0 (0.00s)
+panic: unexpected call to os.Exit(0) during test [recovered]
+	panic: unexpected call to os.Exit(0) during test
+
+goroutine 19 [running]:
+testing.tRunner.func1.2({0x191d20, 0x20dd18})
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:1631 +0x1c4
+testing.tRunner.func1()
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:1634 +0x33c
+panic({0x191d20?, 0x20dd18?})
+	/home/builder/sdk/go1.22.12/src/runtime/panic.go:770 +0x124
+os.Exit(0x0)
+	/home/builder/sdk/go1.22.12/src/os/proc.go:67 +0x58
+example.com/q.FuzzQ.func1(0x40000e1718?, {0x40000aa421?, 0x0?})
+	/tmp/exp/q/q_test.go:28 +0xe4
+reflect.Value.call({0x1942c0?, 0x1da9a0?, 0x13?}, {0x1cacde, 0x4}, {0x40000a8840, 0x2, 0x2?})
+	/home/builder/sdk/go1.22.12/src/reflect/value.go:596 +0x970
+reflect.Value.Call({0x1942c0?, 0x1da9a0?, 0x0?}, {0x40000a8840?, 0x1ca2e0?, 0x22c725?})
+	/home/builder/sdk/go1.22.12/src/reflect/value.go:380 +0x94
+testing.(*F).Fuzz.func1.1(0x40000d0680?)
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:335 +0x270
+testing.tRunner(0x40000d0680, 0x4000104000)
+	/home/builder/sdk/go1.22.12/src/testing/testing.go:1689 +0xec
+created by testing.(*F).Fuzz.func1 in goroutine 18
+	/home/builder/sdk/go1.22.12/src/testing/fuzz.go:322 +0x49c

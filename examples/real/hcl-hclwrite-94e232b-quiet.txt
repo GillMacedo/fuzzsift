@@ -1,0 +1,9 @@
+fuzzsift: github.com/hashicorp/hcl/v2/hclwrite/fuzz, 1 fuzz target, 29 corpus entries
+Each entry ran alone with a 10s timeout. Each failure ran twice.
+
+FuzzParseConfig: 29 entries, 29 pass
+
+  Pass now: attr-expr.hcl, attr-literal.hcl, attr.hcl, block-attrs.hcl, block-comment.hcl, block-empty.hcl, block-nested.hcl, complex.hcl, empty.hcl, escape-dollar.hcl, and 19 more
+
+No entry fails: 29 of 29 pass. 31 test binary runs.
+That covers these entries only. It doesn't show the code has no bugs.

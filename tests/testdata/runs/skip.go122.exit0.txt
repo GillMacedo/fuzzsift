@@ -1,0 +1,6 @@
+=== RUN   FuzzQ
+=== RUN   FuzzQ/skip
+    q_test.go:30: not this one
+--- PASS: FuzzQ (0.00s)
+    --- SKIP: FuzzQ/skip (0.00s)
+PASS

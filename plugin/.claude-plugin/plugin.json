@@ -1,0 +1,13 @@
+{
+  "name": "fuzzsift",
+  "version": "0.1.0",
+  "description": "Triage Go fuzz crashers: run each go test -fuzz corpus entry alone, group failures by panic and stack frame, and print the smallest entry and a go test command for each distinct failure.",
+  "author": {
+    "name": "Giulliano Macedo",
+    "url": "https://github.com/GillMacedo"
+  },
+  "homepage": "https://github.com/GillMacedo/fuzzsift",
+  "repository": "https://github.com/GillMacedo/fuzzsift",
+  "license": "MIT",
+  "keywords": ["go", "golang", "fuzzing", "fuzz-testing", "crash-triage", "testing", "ci", "go-test"]
+}
